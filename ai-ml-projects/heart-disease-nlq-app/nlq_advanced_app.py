@@ -8,7 +8,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.preprocessing import StandardScaler
 
 # 🔐 Cohere setup
-cohere_api_key = "C2UZIwWoSszxjxoxcd21YqAaW168jtfylg9KjI2y"
+cohere_api_key = "your cohere api key here"
 co = cohere.Client(cohere_api_key)
 
 # 📄 Load dataset
@@ -250,3 +250,4 @@ with st.form("prediction_form"):
         prediction, prob = predict_heart_disease(input_data)
         label = "❗ Likely to have heart disease" if prediction == 1 else "✅ Unlikely to have heart disease"
         st.success(f"**Prediction:** {label} (Probability: {prob:.2f})")
+
